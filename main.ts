@@ -3,7 +3,7 @@
  * https://ckeditor.com/ckeditor-5/builder/?redirect=portal#installation/NodgNARATAdCMAYKQCxQKwGZ1QJzoA4A2dARlJExSNwSihTLU10xBHV1xFKiUgCmAO2QIwwUmDHSpYUgF1IuAqQEBDUgQjygA===
  */
 
-import { ClassicEditor, AutoLink, Autosave, Bold, Emoji, Essentials, Italic, Link, Mention, Paragraph } from 'ckeditor5';
+import { ClassicEditor, AutoLink, Autosave, Bold, Emoji, Essentials, Italic, Link, Mention, Paragraph, EditorConfig } from 'ckeditor5';
 
 import 'ckeditor5/ckeditor5.css';
 
@@ -12,7 +12,7 @@ import './style.css';
 const LICENSE_KEY =
 	'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NTM0MDE1OTksImp0aSI6Ijc2NGZjNmI2LTRiN2MtNDFhYi1iNjE1LWZhOGM0NmJkZjEyOSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6ImIzNTBkNDI5In0.f0j0Ax9FWamV-DsCdg-hf7R75d3uvNwEfsuaKuWkURfZHb_8h_y1NYI0HwfjwX7tPjK9DfAzDmj-FiuEDdFxYA';
 
-const editorConfig = {
+const editorConfig: EditorConfig = {
 	toolbar: {
 		items: ['undo', 'redo', '|', 'bold', 'italic', '|', 'emoji', 'link'],
 		shouldNotGroupWhenFull: true
@@ -34,6 +34,7 @@ const editorConfig = {
 			}
 		}
 	},
+
 	mention: {
 		feeds: [
 			{
@@ -46,5 +47,8 @@ const editorConfig = {
 	},
 	placeholder: 'Type or paste your content here!'
 };
-
-ClassicEditor.create(document.querySelector('#editor'), editorConfig);
+const editorElement = document.querySelector<HTMLElement>('#editor');
+if (!editorElement) {
+	throw new Error('Editor element not found in the document.');
+}
+ClassicEditor.create(editorElement, editorConfig);
