@@ -1,0 +1,11 @@
+{
+  "name": "ckeditor5-custom-project",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "vite"
+  },
+  "devDependencies": {
+    "ckeditor5": "46.0.0",
+    "vite": "^6.3.3"
+  }
+}
