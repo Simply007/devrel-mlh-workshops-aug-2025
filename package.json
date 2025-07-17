@@ -10,5 +10,8 @@
     "ckeditor5": "46.0.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.3"
+  },
+  "dependencies": {
+    "ckeditor5-premium-features": "^46.0.0"
   }
 }
