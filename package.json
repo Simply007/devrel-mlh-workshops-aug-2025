@@ -2,11 +2,12 @@
   "name": "ckeditor5-custom-project",
   "version": "0.0.1",
   "scripts": {
-    "start": "vite"
+    "start": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
+    "@ckeditor/ckeditor5-inspector": "^5.0.0",
     "@types/node": "^24.0.14",
-    "and": "^0.0.3",
     "ckeditor5": "46.0.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.3"

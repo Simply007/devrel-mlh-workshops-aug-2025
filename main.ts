@@ -26,6 +26,8 @@ import {
     Template
 } from 'ckeditor5-premium-features';
 
+// @ts-ignore: CKEditorInspector is not typed yet
+import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
@@ -169,8 +171,28 @@ if (!editorElement) {
     throw new Error('Editor element not found in the document.');
 }
 
+let inspectorEnabled = false;
+
 ClassicEditor.create(editorElement, editorConfig).then(editor => {
     window.editor = editor; // Make the editor instance available globally for debugging.
+
+    // Set up inspector toggle functionality
+    const toggleButton = document.getElementById('inspector-toggle');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            if (inspectorEnabled) {
+                CKEditorInspector.destroy()
+                inspectorEnabled = false;
+                toggleButton.textContent = 'Show Inspector';
+                toggleButton.classList.remove('active');
+            } else {
+                CKEditorInspector.attach({ 'editor': window.editor });
+                inspectorEnabled = true;
+                toggleButton.textContent = 'Hide Inspector';
+                toggleButton.classList.add('active');
+            }
+        });
+    }
 });
 
 declare global {

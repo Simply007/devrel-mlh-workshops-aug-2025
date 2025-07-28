@@ -21,3 +21,32 @@
 	min-width: 795px;
 	max-width: 795px;
 }
+
+.controls {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.inspector-toggle-btn {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: var(--ck-content-font-family);
+	transition: background-color 0.2s ease;
+}
+
+.inspector-toggle-btn:hover {
+	background-color: #0056b3;
+}
+
+.inspector-toggle-btn.active {
+	background-color: #28a745;
+}
+
+.inspector-toggle-btn.active:hover {
+	background-color: #1e7e34;
+}
