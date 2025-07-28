@@ -142,6 +142,9 @@ const editorConfig: EditorConfig = {
                 marker: '@',
                 feed: [
                     /* See: https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html */
+                    '@apple',
+                    '@banana',
+                    '@cherry'
                 ]
             }
         ]
