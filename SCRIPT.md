@@ -1,5 +1,7 @@
 # CKEditor 5 Hackathon script
 
+Major League Hacking - Global Hack Week: Beginners Week
+
 ## Resources:
 
 - https://portal.ckeditor.com/signup?utm_campaign=devrel_ghw_hackathon_aug_2025&utm_source=mlh&utm_medium=referral&utm_term=resources
