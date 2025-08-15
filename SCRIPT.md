@@ -16,9 +16,9 @@
 
 ---
 
-# 🛠 Workshop 1: Getting Started with CKEditor 5
+## 🛠 Workshop 1: Getting Started with CKEditor 5
 
-## 1️⃣ Portal Walkthrough
+### Portal Walkthrough
 
 - Go to [CKEditor Portal Signup](https://portal.ckeditor.com/signup?utm_campaign=devrel_ghw_hackathon_aug_2025&utm_source=mlh&utm_medium=referral&utm_term=challenges)
 - Fill in the form with your details
@@ -33,7 +33,7 @@
   - **License keys** (Trial license key, mention JWT.io)
   - Organization users
 
-## 2️⃣ CKEditor Builder
+### CKEditor Builder
 
 - Show the first steps
 - Walkthrough CKEditor types (with preview)
@@ -46,7 +46,7 @@
 - Select **Vanilla and npm hosted**
 - Download the project
 
-## 3️⃣ Dev Environment Setup
+### Dev Environment Setup
 
 - Unzip the downloaded project
 - Open in VS Code
@@ -58,7 +58,7 @@
   - `npm install`
   - `npm start`
 
-## 4️⃣ Show the Portal
+### Show the Portal
 
 ---
 
@@ -136,13 +136,13 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 
 ---
 
-# 🏆 Workshop 2: Advanced CKEditor 5 Features
+## 🏆 Workshop 2: Advanced CKEditor 5 Features
 
-## 1️⃣ Start with the Portal
+### Start with the Portal
 
 ---
 
-## 2️⃣ Mention Plugin with Static Users
+### Mention Plugin with Static Users
 
 *(If not done in Workshop 1)*
 
@@ -161,7 +161,7 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 
 ---
 
-## 3️⃣ Adding Premium Features (from Builder)
+### Adding Premium Features (from Builder)
 
 - Open configuration from the link at the beginning
 - Add the "Template" plugin
@@ -172,9 +172,9 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 
 ---
 
-## 4️⃣ Adding Additional Features Manually
+### Adding Additional Features Manually
 
-### Headings
+#### Headings
 
 - Add Heading to plugins
 - Add `heading` to the toolbar
@@ -230,7 +230,7 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 }
 ```
 
-### Images
+#### Images
 
 - Add plugins: Image, ImageCaption, ImageResize, ImageStyle, ImageToolbar, LinkImage, ImageInsert
 - Configure image toolbar options:
@@ -274,7 +274,7 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 
 - Mention toolbar and upload image is possible, but not a use case
 
-### Template
+#### Template
 
 - Add templates
 - Configure them
@@ -300,7 +300,7 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
   }
   ```
 
-## Add CKInspector
+### Add CKInspector
 
 - install CKInspector
 - Attach CKInspector to the editor with `CKEditorInspector.attach('editor', editor);`
@@ -373,7 +373,7 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
 
 ---
 
-## 6️⃣ Optional: Customize Mention Plugin
+### Optional: Customize Mention Plugin
 
 - Explain the user data structure
 - Show how to add users
@@ -499,3 +499,19 @@ Configure the mention plugin with static users: `@apple`, `@banana`, `@cherry`
     });
   }
   ```
+
+---
+
+## 🗂 Mapping Script Steps to Repository Commits
+
+| Commit Hash | Commit Message |
+|-------------|----------------|
+| c66abb0 | load handles from GitHub in the mention plugin |
+| a96dcb4 | add static mention feed |
+| e296ea0 | add CKInspector |
+| fb9fad8 | adding headings and images and configure templates |
+| 49dec3e | add Template plugin |
+| 16a45ae | transform to Typescript |
+| 7839cdf | initial commit |
+
+> Note: Use `git log` for more details and to verify the mapping.
