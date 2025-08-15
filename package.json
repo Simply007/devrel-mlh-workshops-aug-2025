@@ -8,11 +8,11 @@
   "devDependencies": {
     "@ckeditor/ckeditor5-inspector": "^5.0.0",
     "@types/node": "^24.0.14",
-    "ckeditor5": "46.0.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.3"
   },
   "dependencies": {
+    "ckeditor5": "46.0.0",
     "ckeditor5-premium-features": "^46.0.0"
   }
 }

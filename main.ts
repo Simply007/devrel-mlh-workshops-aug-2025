@@ -39,8 +39,11 @@ import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
 import './style.css';
 
-const LICENSE_KEY =
-    'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NTQ2OTc1OTksImp0aSI6IjMwOTVmMzZmLWE2NTgtNDMxYS04NDMwLTg0MGM5N2E5Mjk3YyIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6ImMzYjFmMTJjIn0.wCNpO6HdWGRCygqMGdTFsSIWuRqGLndYTte5rPdlqIs5ckRsSWgnqDsko_6AsgMCxbZSDbb2OrFWYM3Qvrpy3g';
+// @ts-expect-error ts(2339)
+const LICENSE_KEY = import.meta.env.VITE_CKEDITOR5_LICENSE_KEY;
+if (!LICENSE_KEY) {
+    throw new Error('Missing CKEditor 5 license key');
+}
 
 const editorConfig: EditorConfig = {
     toolbar: {
@@ -155,7 +158,7 @@ const editorConfig: EditorConfig = {
 
                     const res = await fetch(url, {
                         headers: {
-                            // @ts-ignore
+                            // @ts-expect-error ts(2339)
                             "Authorization": `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
                         }
                     });
