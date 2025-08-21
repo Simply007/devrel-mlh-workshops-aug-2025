@@ -2,7 +2,7 @@
   "name": "ckeditor5-custom-project",
   "version": "0.0.1",
   "author": "CKSource (http://cksource.com/)",
-	"license": "GPL-2.0-or-later",
+  "license": "SEE LICENSE.md",
   "scripts": {
     "start": "vite",
     "build": "vite build"
