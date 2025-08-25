@@ -9,7 +9,7 @@ See all CKEditor challenges:
 - [Challenge 3: Add template functionality to CKEditor](https://www.mlh.com/challenges/019880e0-3380-0ee3-725f-ac94deb5606a)
 - [Challenge 4: Hook CKInspector to the project](https://www.mlh.com/challenges/019880dc-cb00-8044-986b-9ce1f382de90)
 
-![CKEditor final result](./screenshot.jpg)
+![CKEditor final result](./assets/screenshot.jpg)
 
 ## Getting Started
 
@@ -71,6 +71,49 @@ Open the project URL displayed in terminal in your browser. Remove the content o
 - Explore the development tools you can use to boost your development and debugging efficiency
 
 For a detailed walkthrough of the workshops scenario, see [SCRIPT.md](./SCRIPT.md).
+
+## Features
+
+### 1. Template, Heading, and Image Support
+
+This project showcases advanced CKEditor features including:
+
+- **Template Plugin**: Pre-defined document templates for quick content creation
+  - CKEditor document template with styled headings and images
+  - MLH banner template for event content
+- **Heading Plugin**: Full heading hierarchy support (H1-H6) with custom styling
+- **Image Plugin**: Comprehensive image handling with:
+  - Image resizing options (50%, 75%, original)
+  - Image captions and alternative text
+  - Multiple image styles (inline, wrap text, break text)
+  - URL-based image insertion
+
+The template system allows users to quickly insert structured content, while the heading and image plugins provide rich formatting capabilities for creating professional documents.
+
+![Template Features](./assets/template-features-screenshot.jpg)
+
+![Image Features](./assets/image-features-screenshot.jpg)
+
+### 2. Custom GitHub Mention Plugin
+
+An enhanced mention plugin that integrates with the GitHub API to provide real-time user suggestions:
+
+- **Dynamic User Search**: Search GitHub users by typing `@username`
+- **GitHub API Integration**: Fetches user data from `https://api.github.com/search/users`
+- **Rich User Display**: Shows GitHub avatars and usernames in mention dropdown
+- **Smart Conversion**: Converts mentions to clickable GitHub profile links
+- **Custom Rendering**: Enhanced UI with user avatars and styled mention items
+
+The plugin demonstrates advanced CKEditor customization including:
+
+- Custom upcast/downcast converters
+- API integration for dynamic content
+- Custom item rendering with GitHub avatars
+- Automatic link generation to GitHub profiles
+
+![GitHub Mention Plugin User Selection](./assets/github-mention-user-selection.jpg)
+
+![GitHub Mention Plugin Link](./assets/github-mention-plugin-link.jpg)
 
 ## Resources
 
